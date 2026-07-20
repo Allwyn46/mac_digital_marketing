@@ -1,5 +1,6 @@
 import CallToAction from "./CallToAction";
 import companies from "../assets/companies.png";
+import HeroRight from "./HeroRight";
 
 const Hero = () => {
   return (
@@ -33,7 +34,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div></div>
+      <div>
+        <HeroRight />
+      </div>
     </section>
   );
 };

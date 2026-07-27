@@ -1,5 +1,6 @@
 import blob from "../assets/blob_back.png";
 import members from "../assets/com_mem.png";
+import workPeople from "../assets/people_working_updated.mp4";
 
 const WorkSection = () => {
   return (
@@ -19,13 +20,13 @@ const WorkSection = () => {
           at the forefront of industry trends and technologies.
         </p>
       </div>
-      <div className="mt-20 flex justify-between items-center">
-        <div className="relative w-[438px] h-[382px] rounded-4xl bg-black overflow-hidden px-5">
+      <div className="mt-20 flex justify-between gap-20 items-center">
+        <div className="relative w-[538px] h-[482px] rounded-4xl bg-black overflow-hidden px-5">
           {/* blob image, positioned behind content */}
           <img
             src={blob}
             alt=""
-            className="absolute -bottom-1 -right-20 w-[600px] h-[382px] pointer-events-none select-none"
+            className="absolute -bottom-1 -right-20 w-[600px] h-[482px] pointer-events-none select-none"
           />
 
           <div className="relative z-10 p-8 flex flex-col justify-center h-full text-white">
@@ -36,6 +37,13 @@ const WorkSection = () => {
             <p className=" mb-10">Project finish with superbly</p>
             <img src={members} alt="" className="mt-10" />
           </div>
+        </div>
+
+        <div className="rounded-2xl ">
+          <video
+            src={workPeople}
+            className="h-[482px] rounded-2xl object-contain"
+          ></video>
         </div>
       </div>
     </section>

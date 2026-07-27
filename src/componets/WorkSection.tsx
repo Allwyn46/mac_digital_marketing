@@ -39,11 +39,15 @@ const WorkSection = () => {
           </div>
         </div>
 
-        <div className="rounded-2xl ">
+        <div className="rounded-2xl">
           <video
             src={workPeople}
+            autoPlay
+            muted
+            loop
+            playsInline
             className="h-[482px] rounded-2xl object-contain"
-          ></video>
+          />
         </div>
       </div>
     </section>

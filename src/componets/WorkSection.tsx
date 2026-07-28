@@ -20,7 +20,8 @@ const WorkSection = () => {
           at the forefront of industry trends and technologies.
         </p>
       </div>
-      <div className="mt-20 flex justify-between gap-20 items-center">
+      <div className="mt-20 flex gap-20 items-center">
+        {/* Stats card */}
         <div className="relative w-[538px] h-[482px] rounded-4xl bg-black overflow-hidden px-5">
           {/* blob image, positioned behind content */}
           <img
@@ -34,20 +35,44 @@ const WorkSection = () => {
               <h1 className="font-jakarta font-bold text-[84px]">920</h1>
               <span className="text-[84px] font-bold font-jakarta">+</span>
             </div>
-            <p className=" mb-10">Project finish with superbly</p>
+            <p className="mb-10">Project finish with superbly</p>
             <img src={members} alt="" className="mt-10" />
           </div>
         </div>
 
-        <div className="rounded-2xl">
-          <video
-            src={workPeople}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-[482px] rounded-2xl object-contain"
-          />
+        {/* Video card */}
+        <div className="relative w-[1192px]">
+          <div className="relative h-[482px] rounded-2xl overflow-hidden bg-gray-300">
+            <video
+              src={workPeople}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover opacity-40"
+            />
+
+            {/* centered overlay text */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-white text-2xl md:text-3xl font-semibold tracking-[0.3em] uppercase">
+                How we work
+              </span>
+            </div>
+          </div>
+
+          {/* play button, overlapping bottom-right corner of the card */}
+          <button
+            aria-label="Play video"
+            className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full bg-lime-400 ring-8 ring-white
+                 flex items-center justify-center shadow-lg hover:bg-lime-500 transition-colors"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="w-7 h-7 fill-black translate-x-[2px]"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

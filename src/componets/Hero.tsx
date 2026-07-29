@@ -16,7 +16,7 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-start items-center space-x-12">
-          <CallToAction />
+          <CallToAction ButtonTXT="Schedule call" />
 
           <div>
             <p className="underline text-[16px] cursor-pointer">

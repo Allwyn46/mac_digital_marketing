@@ -5,6 +5,7 @@ import WorkSection from "./componets/WorkSection";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "lenis/react";
 import ServicesSection from "./componets/ServicesSection";
+import Testimonials from "./componets/Testimonials";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <WorkSection />
         <ServicesSection />
+        <Testimonials slides={}/>
       </ReactLenis>
     </>
   );

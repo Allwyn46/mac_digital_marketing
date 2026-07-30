@@ -42,7 +42,7 @@ const CarouselComp = () => {
   const goNext = () => setCurrent((prev) => (prev + 1) % total);
 
   return (
-    <div className="w-full container p-5 mx-auto bg-[#f5f4f2] rounded-3xl px-10 pt-10 pb-8">
+    <div className="w-full container p-5 mx-auto bg-[#FAFAFA] rounded-3xl px-10 pt-10 pb-8">
       <Carousel
         selectedItem={current}
         onChange={(index) => setCurrent(index)}

@@ -18,7 +18,7 @@ function App() {
         <Hero />
         <WorkSection />
         <ServicesSection />
-        <Testimonials slides={}/>
+        <Testimonials />
       </ReactLenis>
     </>
   );

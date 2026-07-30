@@ -10,48 +10,38 @@ const FAQ: FAQ[] = [
   {
     question: "Why is digital marketing important for my business?",
     answer:
-      "Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.",
-    id: crypto.randomUUID.toString(),
+      "Digital marketing puts your business in front of people who are actively searching for what you offer, rather than waiting for them to find you by chance. It levels the playing field with larger competitors, gives you real-time data on what's working, and lets you adjust your approach quickly instead of committing to a strategy for months before seeing results.",
+    id: crypto.randomUUID(),
   },
   {
     question: "How can digital marketing help improve my website's visibility?",
     answer:
-      "Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.",
-    id: crypto.randomUUID.toString(),
+      "Through SEO, content marketing, and paid search campaigns, digital marketing improves how easily your site is found on search engines and social platforms. This means ranking higher for the keywords your customers are searching, building backlinks that signal authority to Google, and creating content that keeps people on your site longer, all of which push your visibility up over time.",
+    id: crypto.randomUUID(),
   },
   {
     question:
       "How long does it take to see results from digital marketing efforts?",
     answer:
-      "Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.",
-    id: crypto.randomUUID.toString(),
+      "Timelines vary by channel. Paid advertising can show traffic and leads within days of launch, while organic efforts like SEO and content marketing typically take 3 to 6 months to gain real traction as search engines index and rank your site. Most businesses see meaningful, compounding results within the first 6 months of a consistent strategy.",
+    id: crypto.randomUUID(),
   },
   {
     question: "How do you measure the success of digital marketing campaigns?",
     answer:
-      "Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.",
-    id: crypto.randomUUID.toString(),
+      "Success is tracked through concrete metrics tied to your goals: website traffic, conversion rates, cost per lead, click-through rates, and return on ad spend. We set up analytics and conversion tracking from day one, so every campaign has clear before-and-after numbers rather than vague impressions of whether it 'felt' successful.",
+    id: crypto.randomUUID(),
   },
 ];
 
 const AccordionComp = () => {
   return (
     <Accordion>
-      <AccordionItem header="What is Lorem Ipsum?">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </AccordionItem>
-
-      <AccordionItem header="Where does it come from?">
-        Quisque eget luctus mi, vehicula mollis lorem. Proin fringilla vel erat
-        quis sodales. Nam ex enim, eleifend venenatis lectus vitae, accumsan
-        auctor mi.
-      </AccordionItem>
-
-      <AccordionItem header="Why do we use it?">
-        Suspendisse massa risus, pretium id interdum in, dictum sit amet ante.
-        Fusce vulputate purus sed tempus feugiat.
-      </AccordionItem>
+      {FAQ.map((f) => (
+        <AccordionItem key={f.id} header={f.question}>
+          {f.answer}
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 };

@@ -1,4 +1,4 @@
-
+import AccordionComp from "./AccordionComp";
 
 const FAQ = () => {
   return (
@@ -20,6 +20,10 @@ const FAQ = () => {
             <button className="btn">More Questions</button>
             <button>Contact Us</button>
           </div>
+        </div>
+
+        <div>
+          <AccordionComp />
         </div>
       </div>
     </section>

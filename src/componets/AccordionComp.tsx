@@ -1,10 +1,17 @@
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
+import type { ItemState } from "@szhsin/react-accordion";
 
 interface FAQ {
   question: string;
   answer: string;
   id: string;
 }
+
+// interface ItemState {
+//   readonly state: TransitionState;
+//   readonly toggle: (toEnter?: boolean) => void;
+//   disabled?: boolean;
+// }
 
 const FAQ: FAQ[] = [
   {
@@ -34,11 +41,53 @@ const FAQ: FAQ[] = [
   },
 ];
 
+const ToggleIcon = ({ isEnter }: { isEnter: boolean }) => (
+  <span className="relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center">
+    <span className="absolute h-0.5 w-4 bg-neutral-900" />
+    <span
+      className={`absolute h-0.5 w-4 bg-neutral-900 transition-transform duration-300 ease-out ${
+        isEnter ? "rotate-0" : "rotate-90"
+      }`}
+    />
+  </span>
+);
+
+// const AccordionComp = () => {
+//   return (
+//     <Accordion>
+//       {FAQ.map((f) => (
+//         <AccordionItem key={f.id} header={f.question}>
+//           {f.answer}
+//         </AccordionItem>
+//       ))}
+//     </Accordion>
+//   );
+// };
+
 const AccordionComp = () => {
   return (
-    <Accordion>
+    <Accordion
+      transitionTimeout={250}
+      className="mx-auto w-full max-w-2xl divide-y divide-neutral-200 border-y border-neutral-200"
+    >
       {FAQ.map((f) => (
-        <AccordionItem key={f.id} header={f.question}>
+        <AccordionItem
+          key={f.id}
+          itemKey={f.id}
+          buttonProps={{
+            className:
+              "w-full py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-400 rounded-sm",
+          }}
+          panelProps={{ className: "pb-6 text-neutral-500 leading-relaxed" }}
+          header={({ state }) => (
+            <div className="flex w-full items-start justify-between gap-6">
+              <span className="text-lg font-semibold leading-snug text-neutral-900 sm:text-xl">
+                {f.question}
+              </span>
+              <ToggleIcon isEnter={state.isEnter} />
+            </div>
+          )}
+        >
           {f.answer}
         </AccordionItem>
       ))}

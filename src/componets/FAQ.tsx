@@ -2,8 +2,8 @@ import AccordionComp from "./AccordionComp";
 
 const FAQ = () => {
   return (
-    <section className="container">
-      <div className="flex justify-between items-center mt-40">
+    <section className="bg-[#FAFAFA]">
+      <div className="flex justify-between items-center mt-40 p-16 bg-white">
         <div>
           <h1 className="font-jakarta text-4xl font-semibold">
             Digital Marketing FAQs

@@ -68,7 +68,7 @@ const AccordionComp = () => {
   return (
     <Accordion
       transitionTimeout={250}
-      className="mx-auto w-full max-w-2xl divide-y divide-neutral-200 border-y border-neutral-200"
+      className="font-jakarta mx-auto w-full max-w-2xl divide-y divide-neutral-200 border-y border-neutral-200"
     >
       {FAQ.map((f) => (
         <AccordionItem
@@ -81,7 +81,7 @@ const AccordionComp = () => {
           panelProps={{ className: "pb-6 text-neutral-500 leading-relaxed" }}
           header={({ state }) => (
             <div className="flex w-full items-start justify-between gap-6">
-              <span className="text-lg font-semibold leading-snug text-neutral-900 sm:text-xl">
+              <span className="text-lg font-jakarta font-semibold leading-snug text-neutral-900 sm:text-xl">
                 {f.question}
               </span>
               <ToggleIcon isEnter={state.isEnter} />

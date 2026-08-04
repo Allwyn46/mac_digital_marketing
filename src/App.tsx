@@ -7,6 +7,7 @@ import { ReactLenis } from "lenis/react";
 import ServicesSection from "./componets/ServicesSection";
 import Testimonials from "./componets/Testimonials";
 import FAQ from "./componets/FAQ";
+import CaseStudySection from "./componets/CaseStudySection";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <ServicesSection />
         <Testimonials />
         <FAQ />
+        <CaseStudySection />
       </ReactLenis>
     </>
   );
